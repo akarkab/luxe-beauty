@@ -20,8 +20,8 @@
     "test": "vitest --run",
     "format.fix": "prettier --write .",
     "typecheck": "tsc",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "predeploy": "npm run build:client && cp -f dist/spa/index.html dist/spa/404.html",
+    "deploy": "gh-pages -d dist/spa"
   },
   "dependencies": {
     "dotenv": "^17.2.0",
