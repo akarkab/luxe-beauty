@@ -1,5 +1,6 @@
 {
   "name": "fusion-starter",
+  "homepage": "https://akarkab.github.io/luxe-beauty",
   "private": true,
   "type": "module",
   "pkg": {
@@ -18,7 +19,9 @@
     "start": "node dist/server/node-build.mjs",
     "test": "vitest --run",
     "format.fix": "prettier --write .",
-    "typecheck": "tsc"
+    "typecheck": "tsc",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "dotenv": "^17.2.0",
